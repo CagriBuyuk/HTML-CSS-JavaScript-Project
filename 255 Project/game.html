@@ -1,0 +1,83 @@
+<!DOCTYPE html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Puzzle</title>
+<script src="jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <ol><a href="first.html" >Home</a></ol>
+    <h3>Simple Puzzle Game</h3>
+    <div class="main-container">    
+        <button  value="1" id="1">5</button>
+        <button  value="2" id="2">6</button>
+        <button  value="3" id="3">8</button>
+        <button  value="4" id="4">3</button>
+        <button  value="5" id="5"></button>
+        <button  value="6" id="6">7</button>
+        <button  value="7" id="7">1</button>
+        <button  value="8" id="8">2</button>
+        <button  value="9" id="9">4</button>
+    </div>
+
+</body>
+</html>
+    <script>
+    $(document).ready(function(){
+    var up, down, left, right, txt, total;
+    $("button").click(function(){
+        txt = $(this).text();
+        total = $(this).val();   
+        if(txt != ""){
+            if((total != 1) && (total != 2) &&(total != 3)){
+                up = eval(eval(total)-eval(3));           
+                var uTxt = $("#"+up).text();            
+                if(uTxt == ""){            
+                    $("#"+up).text(txt);
+                    $(this).text("");
+                }
+            }
+            if((total != 7) && (total != 8) &&(total != 9)){
+                down = eval(eval(total)+ eval(3));            
+                var dTxt = $("#"+down).text();
+                if(dTxt == ""){          
+                    $("#"+down).text(txt);
+                    $(this).text("");
+                }
+            }
+            if((total != 1) && (total != 4) &&(total != 7)){
+                left = eval(eval(total)-eval(1));         
+                var lTxt = $("#"+left).text();
+                if(lTxt == ""){          
+                    $("#"+left).text(txt);
+                    $(this).text("");
+                }
+            }
+            if((total != 3) && (total != 6) &&(total != 9)){
+                right = eval(eval(total)+ eval(1));           
+                var rTxt = $("#"+right).text();          
+                if(rTxt == ""){                 
+                    $("#"+right).text(txt);
+                    $(this).text("");
+                }
+            }
+            var one = $("#1").text();
+            var two = $("#2").text();
+            var three = $("#3").text();
+            var four = $("#4").text();
+            var five = $("#5").text();
+            var six = $("#6").text();
+            var seven = $("#7").text();
+            var eight = $("#8").text();
+            var nine = $("#9").text();
+    
+            if((one == "1")&&(two == "2")&&(three == "3")&&(four == "4")&&(five == "5")&&(six == "6")&&(seven == "7")&&(eight == "8")&&(nine == "")){           
+                alert("Winner Winner !!!");
+                $("button").attr("disabled", "disabled");
+            }               
+        }   
+    });
+    
+    });
+    </script>
+    

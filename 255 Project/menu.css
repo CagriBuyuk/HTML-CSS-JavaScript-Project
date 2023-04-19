@@ -1,0 +1,186 @@
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #26272d; 
+}
+
+.site-header {
+    position: absolute;
+    padding: 50px 0 0;
+    background-color: transparent;
+    width: 100%;
+    z-index: 3;
+}
+
+
+.site-title {
+    font-size: 18px;
+    line-height: 26px;
+    color: #26272d;
+}
+
+.site-title:hover {
+    color: #26272d;   
+}
+
+.site-title span {
+    font-weight: 700;
+}
+
+.site-title a:hover {
+    color: rgb(0, 0, 0);
+}
+
+
+.navbar-collapse {
+    text-align: center;
+}
+
+.navbar-nav {
+    float: none;
+    display: inline-block;
+}
+
+.navbar-nav > li > a {
+    padding: 0;
+    font-size: 16px;
+    position: relative;
+    color: #26272d;
+    line-height: 26px;
+}
+
+.site-header-white .navbar-nav > li > a,
+.site-header-white .site-title {
+    color: rgb(0, 0, 0);
+}
+
+.navbar-nav > li > a i {
+    margin-left: 5px;
+}
+
+.navbar-nav > li + li {
+    margin-left: 30px;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus,
+.navbar-nav > li.active > a,
+.navbar-collapse li a:hover > li a:hover {
+    background-color: transparent;
+    color: #ffdd00;
+}
+
+
+.hero { 
+    height: 100%;
+    width: 100%;
+    display: table;
+    position: relative;
+}
+
+.overlay:before {
+  content: '';
+  background-color: rgba(255,255,255,0.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.hero-content {
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 75px;
+}
+
+
+.menu-hero {
+    background: url(./assets/img/quebec-1920x1080-4k-hd-wallpaper-st-ferdinand-canada-pink-sunrise-850.jpg) no-repeat center / cover;     
+}
+
+.menu{
+    position: relative;
+    margin: 2em auto 0 auto;
+    background-color: #ffdd00;
+    width: 70px;
+    border-radius: 25px;
+    transition: 0.3s border-radius ease-in-out, 0.3s height ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+ }
+
+.menu--closed{
+    height: 70px;
+}
+
+.menu--open{
+    height: 500px;
+}
+
+.button{
+    transition: 0.3s transform ease-in-out, 0.3s opacity ease-in-out;;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 2em;
+    height: 2em;
+    left: 27%;
+    top: 20px;
+    opacity: 1;
+}
+
+.button:hover {
+    opacity: 0.6;
+}
+
+.button span{
+    width: 100%;
+    height: 4px;
+    background-color: #161616;
+    border-radius: 20%;
+}
+
+.menu--open .button{
+    transform-origin: center;
+    transform: rotate(90deg);
+}
+
+.tools{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    height: 60%;
+    justify-content: space-between;
+    transition: 0.3s margin ease-in-out;
+}
+
+
+.tools .icon:hover{
+    transform: scale(0.8);
+}
+
+.tools--hidden{
+    margin-top: 400px;
+    z-index: -100;
+}
+
+.tools a{
+    color:black;
+    font-weight: bold;
+}
+.tools--visible{
+    margin-top: 40%;
+    z-index: 100;
+}

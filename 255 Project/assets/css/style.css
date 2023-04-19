@@ -1,0 +1,149 @@
+
+h1 {
+    font-size: 62px;
+    color: #26292c;
+}
+
+.btn {
+    line-height: 50px;
+    min-width: 200px;
+    font-size: 16px;
+    font-weight: 300;
+    border: 0;
+    border-radius: 50px;
+    color: #ffffff;
+    background-color: #fff;
+    padding: 0;
+    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+
+.btn-gray:hover,
+.btn-gray:focus {
+    background-color: #ffffff;
+    color: #fff;    
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #26272d;
+}
+
+.site-header {
+    position: absolute;
+    padding: 50px 0 0;
+    background-color: transparent;
+    width: 100%;
+    z-index: 3;
+}
+
+.site-title {
+    font-size: 18px;
+    line-height: 26px;
+    color: #26272d;
+}
+
+.site-title:hover {
+    color: #26272d;   
+}
+
+.site-title span {
+    font-weight: 700;
+}
+
+.site-title a:hover {
+    color: #fff;
+}
+
+.navbar-collapse {
+    text-align: center;
+}
+
+.navbar-nav {
+    float: none;
+    display: inline-block;
+}
+
+.navbar-nav > li > a, 
+.slicknav_nav > li > a {
+    padding: 0;
+    font-size: 16px;
+    position: relative;
+    color: #26272d;
+    line-height: 26px;
+}
+
+.navbar-nav > li > a i {
+    margin-left: 5px;
+}
+
+.navbar-nav > li + li {
+    margin-left: 30px;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus,
+.navbar-nav > li.active > a,
+.navbar-collapse li a:hover > li a:hover {
+    background-color: transparent;
+    color: #ffdd00;
+}
+
+.hero { 
+    background: url(../img/Singapore.jpg) no-repeat center / cover; 
+    height: 100%;
+    width: 100%;
+    display: table;
+    position: relative;
+}
+
+.overlay:before {
+  content: '';
+  background-color: rgba(255,255,255,0.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.hero-content {
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 75px;
+}
+
+.hero-text {
+    max-width: 890px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.hero-text h1 {
+    position: relative;
+    margin: 0;
+}
+
+.hero-text .btn {
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    margin-bottom:-100px;
+}
+
+.hero-text .btn:hover {
+    background-color: #26272d;
+    color: #fff;
+}
+form{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.material-icons{
+    color:#ffdd00;
+}
